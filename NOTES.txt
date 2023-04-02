@@ -1,0 +1,24 @@
+Swagger:
+http://localhost:9088/api/v1/swagger-ui.html
+
+Disabling Basic Auth:
+====================
+https://stackoverflow.com/questions/23636368/how-to-disable-spring-security-login-screen
+
+Disable Component:
+===============
+@ConditionalOnExpression("${authservice.component.enabled:false}")
+
+Token Generator:
+===============
+    URL: http://jwtbuilder.jamiekurtz.com/
+    Ids:
+        supervisor@nosuchmail.org
+        intermed@nosuchmail.org
+    Issuer: api.issuer.vergeinteractive.co.ke
+    Audience:
+        supervisor || inter
+    HMAC 256 / HS256
+
+    Supervisor Sample:
+    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuaXNzdWVyLnZlcmdlaW50ZXJhY3RpdmUuY28ua2UiLCJpYXQiOjE2Nzk5OTk3MTEsImV4cCI6MTcxMTUzNTcxNCwiYXVkIjoic3VwZXJ2aXNvciIsInN1YiI6InN1cGVydmlzb3JAbm9zdWNobWFpbC5vcmcifQ.mxI0rtrLrl8h2hpJU9Cl3Pmxphrdx71dWJTuxkNTqK8
